@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --familia-fuente: "Poppins", sans-serif;
+    --color-primario: #D60900;
+    --color-secundario: #572E2B;
+    --color-fondo: #332322;
+    --color-terciario: #812F2B;
+    --color-cuaternario:#AC241D;
+
+}
+body{
+    font-family: var(--familia-fuente);
+    background-color: var(--color-fondo);
+    color: var(--color-primario);
+}
+.texto-nav {
+    color: var(--color-primario);
+}
+.texto-nav:hover {
+    color: white;
+}
+.logo {
+    width: 4rem;
+    height: 4rem;
+}
+.carousel-item{
+    height: 70vh;
+}
+.carousel-item img{
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+.tarjetas {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.banner {
+    width: 100%;
+    min-height: 600px;
+    background-image: linear-gradient(#00000080, #00000080), url(../assets/img/teatro0.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+.text-container {
+    width: 90%;
+    max-width: 500px;
+    margin-right: 150px;
+}
+.tarjeta-inner {
+    background-color:#1a1a1a;
+    width: 18rem;
+    color: white;
+}
+.btn-tarjeta {
+    background-color: var(--color-terciario);
+    color: white;
+}
+
+.titulo {
+    text-align: center;
+    color: var(--color-primario);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.card, .btn, .container-historia, .map-container {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.fa-whatsapp{
+    font-size: 3em;
+    color:rgb(44, 181, 44);
+    position:fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.img-evento {
+    width: 60%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+/* Galería de imágenes */
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.image-container img {
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: auto;
+}
+
+.image-container:hover img {
+    transform: scale(1.1); 
+}
+
+.image-container:hover  {
+    opacity: 1; 
+}
+.text-galeria {
+    color: #fff;
+}
+
+/* Nosotros */
+.container-historia {
+    max-width: 80%; 
+    background-color: #1a1a1a;
+    color: #fff; 
+    margin: 0 auto; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+.container-historia h1 {
+    color: var(--color-primario);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.container-historia .list-group-item {
+    border: none; 
+    background-color: #333; 
+    color: #fff; 
+}
+
+.container-historia .img-fluid {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.container-historia .map-container {
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.map-container {
+    margin-top: 0.5rem; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px; 
+    overflow: hidden; 
+}
+
+/* Contacto */
+.contact-container {
+    background-color: #1a1a1a;
+    padding: 3rem; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+    max-width: 800px;
+    margin: 0 auto; 
+}
+.contact-container h1 {
+    color: var(--color-primario);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.contact-container p {
+    color: #fff;
+}
+
+/* Carrito */
+/* Estilo general de la tabla */
+.table {
+    width: 100%; /* La tabla ocupa el 100% del contenedor */
+    margin-bottom: 30px;
+}
+
+/* Aumentar el espaciado entre los títulos */
+.table th {
+    padding: 1rem; /* Aumentar el padding para más separación */
+    text-align: center;
+}
+
+/* Estilo para el contenedor del carrito de compras */
+.carrito-compra {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* Estilo para la sección que contiene la tabla y el resumen de la compra */
+.carrito-compra .container {
+    width: 90%;
+}
+
+/* Estilo para el resumen de la compra */
+.total-compra {
+    background-color: #343a40;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.total-compra h4 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.total-compra .list-group-item {
+    background-color: #343a40;
+    color: white;
+    border: none;
+}
+
+.total-compra .list-group-item span {
+    font-weight: bold;
+}
+
+.total-compra .d-grid {
+    margin-top: 20px;
+}
+
+.total-compra button {
+    background-color: #007bff;
+    border: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.total-compra button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para las imágenes en la tabla */
+.table img {
+    width: 80px;
+    height: auto;
+}
+
+/* Estilo para la tabla de carrito con fondo oscuro */
+.table-dark {
+    background-color: #212529;
+    color: white;
+}
+
+/* Estilo de las celdas de la tabla */
+.table td {
+    vertical-align: middle;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Estilo para el botón de eliminación en la tabla */
+.table .btn-danger {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.table .btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Overlay que cubre toda la página */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 1040; /* Asegúrate de que esté por encima de todo */
+}
+
+/* Asegurar que la alerta esté encima del overlay */
+.alert {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1050; /* Debe estar por encima del overlay */
+    width: 80%; /* Opcional: ajustar tamaño de la alerta */
+    max-width: 500px;
+}
+
+@media screen and (max-width: 768px){
+    .text-footer{
+        font-size: 0.8rem;
+    }
+    .text-container {
+        width: 90%;
+        max-width: 500px;
+        margin-right: 20px;
+    }
+
+
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .card-group {
+        justify-content: space-evenly;
+    }
+
+    .card-group .card {
+        flex: 0 0 calc(50% - 1.5rem); /* Dos tarjetas por fila */
+    }
+}
+
+
+

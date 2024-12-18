@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/img/icono.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="https://kit.fontawesome.com/cbbd236219.js" crossorigin="anonymous"></script>
+    <title>Compra de Entradas - Teatro Rock</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand texto-nav" href="../index.html">
+                    <img src="../assets/img/logo.png" class="logo" alt="Logo">
+                    Teatro Rock
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Entradas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./galeria.html">Galeria</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./nosotros.html">Nosotros</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mt-5 pt-5" id="entradas">
+      <section>
+        <div class="container">
+            <h1 class="text-center mb-4">Compra tus entradas</h1>
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0 mx-auto d-flex justify-content-center align-items-center">
+                    <img id="imagenConcierto" src="../assets/img/tarja.jpeg" class="img-fluid rounded shadow img-evento" alt="Evento">
+                </div>
+                <div class="col-md-6">
+                    <form class="card p-4 shadow rounded">
+                        <div class="mb-3">
+                            <label for="concierto" class="form-label">Concierto</label>
+                            <select id="concierto" name="concierto" class="form-select">
+                                <option value="tarja">Tarja Turunen</option>
+                                <option value="stratovarius">Stratovarius</option>
+                                <option value="beyond">Beyond the Black</option>
+                                <option value="sonata">Sonata Artica</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="sector" class="form-label">Sector</label>
+                            <select id="sector" name="sector" class="form-select">
+                                <option value="campo">Campo $60.000</option>
+                                <option value="platea">Platea $80.000</option>
+                                <option value="platea-alta">Platea Alta $50.000</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cantidad" class="form-label">Cantidad de entradas</label>
+                            <select id="cantidad" name="cantidad" class="form-select">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-tarjeta w-100" id="agregarAlCarrito">Agregar al carrito</button>
+                        <hr>
+                        <label class="form-label">El máximo de entradas por evento y sector es 6</label>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <section class="carrito-compra" id="carrito">
+        <div class="container bg-dark text-white p-5 rounded shadow-lg">
+            <h2 class="titulo">Carrito de Entradas</h2>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="table-responsive">
+                        <table class="table table-dark table-striped w-100">
+                            <thead>
+                                <tr>
+                                    <th>Imagen</th>
+                                    <th>Evento</th>
+                                    <th>Sector</th>
+                                    <th>Entradas</th>
+                                    <th>Precio</th>
+                                    <th>Subtotal</th>
+                                    <th>Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaCarrito">
+                                <!-- Las filas del carrito se agregarán dinámicamente aquí -->
+                            </tbody>
+                            <tfoot>
+                                <tr id="totalCompraRow">
+                                    <td colspan="4" class="text-end"><strong>Total:</strong></td>
+                                    <td id="totalCompra" colspan="2">$0</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" class="text-end">
+                                        <button id="limpiarCarrito" class="btn btn-danger d-none">Limpiar Carrito</button>
+                                        <button id="confirmarCompra" class="btn btn-success d-none">Confirmar Compra</button>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="overlay" class="overlay d-none"></div>
+
+            <div id="alerta" class="alert alert-success d-none mt-3" role="alert">
+                <h4 class="alert-heading text-center">Confirmación de compra</h4>
+                <p>Muchas gracias por realizar tu compra, esperemos que disfrutes el show!!! y no te pierdas las novedades 
+                    con la información de nuestros proximos conciertos
+                </p>
+                <hr>
+                <p class="mb-0">Tus entradas se enviaron por mail, no olvides chequear tu correo</p>
+                <div class="text-end">
+                    <button type="button" class="btn btn-tarjeta" id="compraRealizada">Cerrar</button>
+                </div>
+            </div> 
+            <div id="alertaLimiteExcedido" class="alert alert-warning fade show d-none" role="alert">
+                <strong>Lo Sentimos!</strong> Excediste el límite de entradas. Recuerda que el
+                límite es 6 entradas por evento y sector.
+                <div class="text-end">
+                    <button type="button" class="btn btn-tarjeta" id="cerrarAlertaLimite">Cerrar</button>
+                </div>
+            </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-center text-light py-3 mt-5 text-footer">
+        <p>© 2024 Teatro Rock. Todos los derechos reservados.</p>
+    </footer>
+    <script src="../js/entradas.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
